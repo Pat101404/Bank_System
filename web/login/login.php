@@ -5,7 +5,7 @@
 <body>
 
 <div class="login-box">
-    <form>
+    <form action="../home.php">
         <div class="user-box">
             <input type="text" name="" required="">
             <label>Username</label>
