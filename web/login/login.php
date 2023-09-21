@@ -13,11 +13,10 @@
         <div class="user-box">
             <input type="password" name="" required="">
             <label>Password</label>
-        </div><center>
-        <a href="#">
-            SEND
-            <span></span>
-        </a></center>
+        </div>
+        <center>
+        <input type="submit" value="Login">
+        </center>
     </form>
 </div>
 
