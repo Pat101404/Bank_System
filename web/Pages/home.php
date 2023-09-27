@@ -1,12 +1,12 @@
 
 <?php 
-    require "./templates/head-no1.php";
+    require "../templates/head-no1.php";
 ?>
     <title>FlowBank - Home</title>
 </head>
 <body>
     <?php 
-        require "./templates/nav.php";
+        require "../templates/nav.php";
     ?>
 
     <div>
@@ -21,6 +21,6 @@
     </div>
 
     <?php 
-        require "./templates/footer.php";
+        require "../templates/footer.php";
     ?>
 </body>
