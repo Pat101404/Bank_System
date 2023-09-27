@@ -45,3 +45,12 @@ footer p {
     margin: 0;
     font-size: 10px;
 }
+
+.contacts{
+    display: inline-flex;
+    text-align: center;
+}
+
+.contacts p{
+    margin: 0 10px;
+}
