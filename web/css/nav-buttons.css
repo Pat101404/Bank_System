@@ -32,3 +32,6 @@ li:hover {
 li:hover::before {
     width: 100%;
 }
+li:hover::after{
+    height: 100%;
+}
