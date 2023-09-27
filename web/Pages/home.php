@@ -8,11 +8,12 @@
     <?php 
         require "../templates/nav.php";
     ?>
-
-    <div>
-
+    <div class="core">
+        <?php 
+            require "../templates/lorem.html";
+        ?>
     </div>
-    
+
     <div class="contacts">
         <p>123 Bank Street</p>
         <p>City, State ZIP Code</p>

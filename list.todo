@@ -4,11 +4,13 @@
 
 // BUG : BUG template
 
-[x] : login Page
-[ ] : Functional Login Page
-[ ] : Home Page
-[ ] : Account Page
-[ ] : Admin Page
-[ ] : Connection to Database
+// [ ]: Credit cards
+// [ ]: Loans
+// [ ]: Mortgage
+// [ ]: Investments
+// [ ]: Insurance
 
-// TODO : 
+// [ ]: Registation
+// [ ]: Login
+// [ ]: Calculators
+// [ ]: ads
