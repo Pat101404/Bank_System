@@ -13,7 +13,7 @@
         require "../templates/nav.php";
     ?>
 
-    <div>
+    <div class="core">
         <h3>Cards</h3>
         <div>   
 
@@ -25,9 +25,9 @@
             </div>
             <div class="credit-card-info">
                 <ul>
-                    <li>info</li>
-                    <li>info info</li>
-                    <li>info info info</li>
+                    <li>Tempor quis est minim minim voluptate officia proident.</li>
+                    <li>Anim id sit exercitation eiusmod sint aliqua.</li>
+                    <li>Est aute tempor aliqua anim pariatur laborum voluptate do id irure esse reprehenderit sint.</li>
                 </ul>
             </div>  
         </div>
@@ -38,9 +38,9 @@
             </div>
             <div class="debit-card-info">
                 <ul>
-                    <li>info</li>
-                    <li>info info</li>
-                    <li>info info info</li>
+                    <li>Laborum eiusmod dolor nostrud sit consequat consectetur quis pariatur.</li>
+                    <li>Ex dolor dolore anim ex eu nisi reprehenderit irure sit non.</li>
+                    <li>Aliquip cupidatat elit nostrud officia cupidatat ex occaecat ex mollit consequat deserunt irure.</li>
                 </ul>
             </div>  
         </div>

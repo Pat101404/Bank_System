@@ -17,7 +17,7 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #8D169E;
+    background-image: linear-gradient(#8D169E, #590265);
 }
 nav ul li {
     float: left;
@@ -34,17 +34,18 @@ nav ul li a {
 } 
 
 footer {
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     height: 5%;
-    background-color: black;
+    background-image: linear-gradient(black, #202020);
     color: ghostwhite;
     text-align: center;
 }
 footer p {
     margin: 0;
-    font-size: 10px;
+    font-size: 15px;
 }
 
 .contacts{
