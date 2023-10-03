@@ -3,8 +3,13 @@
 body{
     font-family: 'Exo 2', sans-serif;
     margin: 0;
-    background-color: white;
     font-size: 24px;
+}
+a{
+    color: #8D169E;
+}
+a:visited{
+    color: #590265;
 }
 ul {
     list-style-type: none;
@@ -18,7 +23,7 @@ li {
 }
 li a {
     display: block;
-    color: ghostwhite;
+    color: ghostwhite !important;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -42,14 +47,18 @@ footer p {
 }
 
 .contacts{
-    display: inline-flex;
+    display: inline;
     text-align: center;
+    color: black;
+}
+body div.contacts a{
+    
 }
 .contacts p{
-    margin: 0 10px;
+    margin: 0;
 }
 .core{
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 

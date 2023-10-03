@@ -15,10 +15,7 @@
     </div>
 
     <div class="contacts">
-        <p>123 Bank Street</p>
-        <p>City, State ZIP Code</p>
-        <p>Email: <a href="mailto:info@flowbank.com">info@flowbank.com</a></p>
-        <p>Phone: +420 111222333</p>
+        <p>123 Bank Street | City, State ZIP Code | Email: <a href="mailto:info@flowbank.com">info@flowbank.com</a> | Phone: +420 111222333</p>
     </div>
 
     <?php 

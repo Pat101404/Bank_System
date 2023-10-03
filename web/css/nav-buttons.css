@@ -1,7 +1,6 @@
 li {
     border: none;
     position: relative;
-    transition: .5s ease;
     background: transparent;
 }
 li::before {
