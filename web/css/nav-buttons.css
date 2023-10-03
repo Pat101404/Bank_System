@@ -1,9 +1,9 @@
-li {
+nav ul li {
     border: none;
     position: relative;
     background: transparent;
 }
-li::before {
+nav ul li::before {
     content: '';
     position: absolute;
     left: 0;
@@ -13,7 +13,7 @@ li::before {
     background-color: ghostwhite;
     transition: .5s ease;
 }
-li::after {
+nav ul li::after {
     content: '';
     position: absolute;
     left: 0;
@@ -25,12 +25,12 @@ li::after {
     z-index: -1;
 }
 
-li:hover {
+nav ul li:hover {
     transition-delay: .5s;
 }
-li:hover::before {
+nav ul li:hover::before {
     width: 100%;
 }
-li:hover::after{
+nav ul li:hover::after{
     height: 100%;
 }

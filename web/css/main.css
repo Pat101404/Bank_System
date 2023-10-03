@@ -4,6 +4,7 @@ body{
     font-family: 'Exo 2', sans-serif;
     margin: 0;
     font-size: 24px;
+    background-color: gradient(linear, left top, right bottom);
 }
 a{
     color: #8D169E;
@@ -11,17 +12,17 @@ a{
 a:visited{
     color: #590265;
 }
-ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #8D169E;
 }
-li {
+nav ul li {
     float: left;
 }
-li a {
+nav ul li a {
     display: block;
     color: ghostwhite !important;
     text-align: center;
@@ -52,7 +53,7 @@ footer p {
     color: black;
 }
 body div.contacts a{
-    
+
 }
 .contacts p{
     margin: 0;
