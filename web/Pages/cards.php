@@ -54,12 +54,12 @@
             <div class="card-row">
                 <a class="card-link" href="">
                     <div class="card-window-v">
-                        <div class="card-image">
+                        <div class="card-image-v">
                             <img src="../imgs/png/credit-card.png" alt="credit-card-image">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-v">
                             <ul>
-                                <h4>Credit Card</h4>
+                                <h4>Classic Debit Card</h4>
                                 <li>Tempor quis est minim minim voluptate officia proident.</li>
                                 <li>Anim id sit exercitation eiusmod sint aliqua.</li>
                                 <li>Est aute tempor aliqua anim pariatur laborum voluptate do id irure esse reprehenderit sint.</li>
@@ -69,12 +69,12 @@
                 </a>
                 <a class="card-link" href="">
                     <div class="card-window-v">
-                        <div class="card-image">
+                        <div class="card-image-v">
                             <img src="../imgs/png/credit-card.png" alt="debit-card-image">    
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-v">
                             <ul>
-                                <h4>Debit Card</h4>
+                                <h4>Business Debit Card</h4>
                                 <li>Laborum eiusmod dolor nostrud sit consequat consectetur quis pariatur.</li>
                                 <li>Ex dolor dolore anim ex eu nisi reprehenderit irure sit non.</li>
                                 <li>Aliquip cupidatat elit nostrud officia cupidatat ex occaecat ex mollit consequat deserunt irure.</li>
@@ -87,12 +87,12 @@
             <div class="card-row">
                 <a class="card-link" href="">
                     <div class="card-window-v">
-                        <div class="card-image">
+                        <div class="card-image-v">
                             <img src="../imgs/png/credit-card.png" alt="credit-card-image">
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-v">
                             <ul>
-                                <h4>Credit Card</h4>
+                                <h4>Classic Credit Card</h4>
                                 <li>Tempor quis est minim minim voluptate officia proident.</li>
                                 <li>Anim id sit exercitation eiusmod sint aliqua.</li>
                                 <li>Est aute tempor aliqua anim pariatur laborum voluptate do id irure esse reprehenderit sint.</li>
@@ -102,12 +102,12 @@
                 </a>
                 <a class="card-link" href="">
                     <div class="card-window-v">
-                        <div class="card-image">
+                        <div class="card-image-v">
                             <img src="../imgs/png/credit-card.png" alt="debit-card-image">    
                         </div>
-                        <div class="card-info">
+                        <div class="card-info-v">
                             <ul>
-                                <h4>Debit Card</h4>
+                                <h4>Business Credit Card</h4>
                                 <li>Laborum eiusmod dolor nostrud sit consequat consectetur quis pariatur.</li>
                                 <li>Ex dolor dolore anim ex eu nisi reprehenderit irure sit non.</li>
                                 <li>Aliquip cupidatat elit nostrud officia cupidatat ex occaecat ex mollit consequat deserunt irure.</li>
