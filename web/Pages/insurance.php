@@ -24,17 +24,9 @@
                 <h4>Life insurance</h4>
                 <p>Aliqua anim eu magna quis reprehenderit eu occaecat. Sunt cillum ut esse nulla quis aliquip eu tempor amet tempor laboris velit qui. Ut non dolor fugiat id exercitation. Elit Lorem duis elit deserunt reprehenderit laborum deserunt nostrud.</p>
             </div>
-            <div class="medical-insurance">
-                <h4>Medical insurance</h4>
-                <p>Sunt in pariatur sit irure Lorem exercitation culpa Lorem. Enim irure fugiat tempor aute qui veniam cupidatat aliquip ipsum ad. Velit aliquip veniam in nostrud exercitation minim amet eiusmod dolor qui.</p>
-            </div>
             <div class="property-insurance">
                 <h4>Property insurance</h4>
                 <p>Occaecat et ipsum nulla officia elit eu elit dolor officia nostrud aute excepteur adipisicing in. Eu non enim Lorem id sint. Cillum duis commodo voluptate pariatur amet sunt nostrud esse mollit excepteur proident. Ea excepteur ullamco qui culpa nostrud laboris qui ullamco anim consectetur sint.</p>
-            </div>
-            <div class="law-insurance">
-                <h4>Law insurance</h4>
-                <p>Laborum anim laborum sunt dolor laborum commodo do ipsum. Sit incididunt magna ex ad tempor ut laborum qui anim. Anim anim laboris qui deserunt ut. Dolore dolore adipisicing pariatur labore est esse nulla minim sunt ut labore cillum pariatur consectetur. Enim deserunt laborum mollit laborum aliquip adipisicing fugiat aliqua velit excepteur sunt ullamco sunt. Lorem Lorem laborum culpa labore aliqua enim ex ut ad consequat mollit eiusmod velit deserunt. Irure veniam eu mollit ad dolor pariatur quis ullamco cillum dolor.</p>
             </div>
             <div class="business-insurance">
                 <h4>Business insurance</h4>
@@ -53,9 +45,7 @@
             <ul class="insurance-list">
                 <li><a>Travel insurance</a></li>
                 <li><a>Life insurance</a></li>
-                <li><a>Medical insurance</a></li>
                 <li><a>Property insurance</a></li>
-                <li><a>Law insurance</a></li>
                 <li><a>Business insurance</a></li>
                 <li><a>Car insurance</a></li>
                 <li><a>Accident insurance</a></li>
