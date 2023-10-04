@@ -8,7 +8,7 @@ body{
     font-family: 'Exo 2', sans-serif;
     margin: 0;
     font-size: 24px;
-    background-image: linear-gradient(to bottom right, #fce6ff, ghostwhite);
+    background: ghostwhite;
 }
 p{
     padding-top: 10px;
@@ -68,15 +68,29 @@ footer p {
     margin-right: 20%;
     margin-bottom: 50px;
 }
-.card-window{
+.card-window-h{
+    margin: 30px 0px 30px 0px !important;
     display: flex;
-    width: 100%;
+    width: 100%-100px;
     padding: 20px;
     margin: 5%;
-    border-color: lightgrey;
-    border-style: solid;
-    border-width: 5px;
     border-radius: 50px;
+    background-image: linear-gradient(to right, #8D169E, ghostwhite, ghostwhite);
+    box-shadow:  20px 20px 40px #cac0cc, -20px -20px 40px ghostwhite;
+    transition: all .5s ease;
+}
+.card-row{
+    display: flex;
+}
+.card-window-v{
+    margin: 30px 50px 30px 50px !important;
+    width: 100%-100px;
+    padding: 20px;
+    margin: 5%;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, #8D169E, ghostwhite, ghostwhite);
+    box-shadow:  20px 20px 40px #cac0cc, -20px -20px 40px #cac0cc;
+    transition: all .5s ease;
 }
 .card-image{
     align-content: center;
@@ -86,8 +100,22 @@ footer p {
     max-width: 80%;
     height: auto;
     object-fit: scale-down;
+    align-self: center;
 }
 .card-info{
     padding-right: 5%;
     align-self: center;
+    color: black !important;
+}
+.card-link{
+    text-decoration: none;
+    color: black;
+}
+.card-window-h:hover {
+    transform: translate3D(0,-1px,0) scale(1.02);
+    transition: all .5s ease;
+}
+.card-window-v:hover {
+    transform: translate3D(0,-1px,0) scale(1.02);
+    transition: all .5s ease;
 }
