@@ -3,8 +3,8 @@
         <h1>Overview</h1>
     </div>
 </div>
-<!-- Insights -->
-<ul class="insights">
+<!-- infoboxes -->
+<ul class="infoboxes">
     <li><i class='bx bx-user'></i>
         <span class="info">
             <h3>
@@ -39,10 +39,10 @@
         </span>
     </li>
 </ul>
-<!-- End of Insights -->
+<!-- End of infoboxes -->
 
-<div class="bottom-data">
-    <div class="orders">
+<div class="datarow">
+    <div class="transaction-list">
         <div class="header">
             <i class='bx bx-receipt'></i>
             <h3>Recent Activity</h3>
@@ -103,36 +103,36 @@
         </table>
     </div>
 
-    <!-- Reminders -->
-    <div class="reminders">
+    <!-- notifications -->
+    <div class="notifications">
         <div class="header">
             <i class='bx bx-note'></i>
             <h3>Notifications</h3>
         </div>
-        <ul class="task-list">
+        <ul class="notification-list">
             <li class="notification">
-                <div class="task-title">
+                <div class="notification-title">
                     <i class='bx bx-error-circle'></i>
                     <p>Notification1</p>
                 </div>
                 <i class='bx bx-dots-vertical-rounded'></i>
             </li>
             <li class="notification">
-                <div class="task-title">
+                <div class="notification-title">
                     <i class='bx bx-error-circle'></i>
                     <p>Notification2</p>
                 </div>
                 <i class='bx bx-dots-vertical-rounded'></i>
             </li>
             <li class="notification">
-                <div class="task-title">
+                <div class="notification-title">
                     <i class='bx bx-error-circle'></i>
                     <p>Notification3</p>
                 </div>
                 <i class='bx bx-dots-vertical-rounded'></i>
             </li>
             <li class="notification">
-                <div class="task-title">
+                <div class="notification-title">
                     <i class='bx bx-error-circle'></i>
                     <p>Notification3</p>
                 </div>
@@ -140,5 +140,5 @@
             </li>
         </ul>
     </div>
-    <!-- End of Reminders-->
+    <!-- End of notifications-->
 </div>

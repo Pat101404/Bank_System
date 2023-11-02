@@ -1,6 +1,6 @@
 <div class="sidebar">
     <a href="#" class="logo">
-        <i class='bx bx-code-alt'></i>
+        <i class='bx bx-transfer-alt'></i>
         <div class="logo-name"><span>Flow</span>Bank</div>
     </a>
     <ul class="side-menu">

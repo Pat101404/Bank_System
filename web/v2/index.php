@@ -16,13 +16,13 @@
         require "./templates/sidebar.php"
     ?>
     <!-- End of Sidebar -->
-    <?php
-        require "./templates/navbar.php"
-    ?>
+
     <!-- Main Content -->
     <div class="content">
         <!-- Navbar -->
-
+        <?php
+            require "./templates/navbar.php"
+        ?> 
         <!-- End of Navbar -->
 
         <main>
