@@ -63,7 +63,7 @@
                     <td>Card #1</td>
                     <td>John Doe</td>
                     <td>15:42 | 14/08/2023</td>
-                    <td>Transfer</td>
+                    <td>transaction</td>
                     <td>100,000</td>
                     <td><span class="status completed">Completed</span></td>
                 </tr>
@@ -71,7 +71,7 @@
                     <td>Card #3</td>
                     <td>John Doe</td>
                     <td>15:42 | 14/08/2023</td>
-                    <td>Transfer</td>
+                    <td>transaction</td>
                     <td>-20,000</td>
                     <td><span class="status pending">Pending</span></td>
                 </tr>
@@ -79,7 +79,7 @@
                     <td>Card #2</td>
                     <td>John Doe</td>
                     <td>15:42 | 14/08/2023</td>
-                    <td>Transfer</td>
+                    <td>transaction</td>
                     <td>10,000</td>
                     <td><span class="status process">Processing</span></td>
                 </tr>
@@ -87,7 +87,7 @@
                     <td>Card #1</td>
                     <td>John Doe</td>
                     <td>15:42 | 14/08/2023</td>
-                    <td>Transfer</td>
+                    <td>transaction</td>
                     <td>50,000</td>
                     <td><span class="status failed">Failled</span></td>
                 </tr>
@@ -95,7 +95,7 @@
                     <td>Card #1</td>
                     <td>John Doe</td>
                     <td>15:42 | 14/08/2023</td>
-                    <td>Transfer</td>
+                    <td>transaction</td>
                     <td>1,000,000</td>
                     <td><span class="status declined">Declined</span></td>
                 </tr>

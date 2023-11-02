@@ -18,7 +18,7 @@ menuBar.addEventListener('click', () => {
 });
 
 function toggleElement(elementId) {
-    const elementIds = ['overview', 'transfers', 'cards', 'loans', 'account', 'settings'];
+    const elementIds = ['overview', 'transactions', 'cards', 'loans', 'account', 'settings'];
 
     elementIds.forEach(function(id) {
         var element = document.getElementById(id);

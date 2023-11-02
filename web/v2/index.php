@@ -32,9 +32,9 @@
                 ?>
             </div>
             
-            <div id="transfers" style="display: none;">
+            <div id="transactions" style="display: none;">
                 <?php
-                    require "./templates/transfers.php"
+                    require "./templates/transactions.php"
                 ?> 
                 </div>
 
