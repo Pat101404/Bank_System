@@ -422,7 +422,7 @@ body{
 
 .content main .datarow .notifications{
     flex-grow: 1;
-    flex-basis: 300px;
+    flex-basis: 200px;
 }
 
 .content main .datarow .notifications .notification-list{
@@ -450,7 +450,7 @@ body{
 }
 
 .content main .datarow .notifications .notification-list li .bx{
-  cursor: pointer;  
+    cursor: pointer;  
 }
 
 .content main .datarow .notifications .notification-list li.notification{
@@ -458,7 +458,7 @@ body{
 }
 
 .content main .datarow .notifications .notification-list li:last-child{
-   margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 @media screen and (max-width: 768px) {

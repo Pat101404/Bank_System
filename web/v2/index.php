@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./styles/overview.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/card_page.css">
+    <link rel="stylesheet" href="./styles/card.css">
     <title>FlowBank | Overview</title>
+    <link rel="icon" type="image/x-icon" href="./imgs/logo/logo.svg">
 </head>
 
 <body class="dark">

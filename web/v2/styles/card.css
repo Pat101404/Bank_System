@@ -1,0 +1,76 @@
+.cardcontainer{
+    margin: 0;
+    max-width: 30rem;
+    width: 95%;
+}
+
+.cardcontainer p{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font: inherit;
+    width: auto;
+}
+
+.cardcontainer p::placeholder{
+    color: #fff;
+}
+
+.cardcontainer label{
+    display: block;
+}
+
+.cardcontainer .card{
+    background-color: #0f0f0f;
+    border-radius: 14px;
+    color: #bebebe;
+    padding: 32px;
+}
+
+.cardcontainer .header{
+    margin-bottom: 7rem;
+}
+
+.cardcontainer .title{
+    color: #fff;
+    float: left;
+    font-size: 1.5rem;
+}
+
+.cardcontainer .logo{
+    float: right;
+}
+
+.cardcontainer .row{
+    margin-bottom: 2rem;
+}
+
+.cardcontainer .cardcontent{
+    margin-bottom: 5rem;
+}
+
+.cardcontainer .content p{
+    outline: none;
+}
+
+.cardcontainer .card-number{
+    font-size: 32px;
+}
+
+.cardcontainer .card-expire{
+    float: left;
+}
+
+.cardcontainer .card-expire p{
+    font-size: 0.9rem;
+}
+
+.cardcontainer .card-cvv{
+    float: right;
+}
+
+.cardcontainer .card-cvv p{
+    width: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}

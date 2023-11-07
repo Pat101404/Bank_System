@@ -1,0 +1,76 @@
+.content main .datarow .card-window{
+    flex-grow: 1;
+    flex-basis: 500px;
+}
+
+.content main .datarow .card-transactions{
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+
+.content main .datarow .card-transactions table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.content main .datarow .card-transactions table th{
+    padding-bottom: 12px;
+    font-size: 13px;
+    text-align: left;
+    border-bottom: 1px solid var(--grey);
+}
+
+.content main .datarow .card-transactions table td{
+    padding: 16px 0;
+}
+
+.content main .datarow .card-transactions table tr td:first-child{
+    display: flex;
+    align-items: center;
+    grid-gap: 12px;
+    padding-left: 6px;
+}
+
+.content main .datarow .card-transactions table td img{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.content main .datarow .card-transactions table tbody tr{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.content main .datarow .card-transactions table tbody tr:hover{
+    background: var(--grey);
+}
+
+.content main .datarow .card-transactions table tr td .status{
+    font-size: 10px;
+    padding: 6px 16px;
+    color: var(--light);
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+.content main .datarow .card-transactions table tr td .status.completed{
+    background: var(--success);
+}
+
+.content main .datarow .card-transactions table tr td .status.process{
+    background: var(--processing);
+}
+
+.content main .datarow .card-transactions table tr td .status.pending{
+    background: var(--warning);
+}
+
+.content main .datarow .card-transactions table tr td .status.failed{
+    background: var(--danger);
+}
+
+.content main .datarow .card-transactions table tr td .status.declined{
+    background: var(--danger);
+}
