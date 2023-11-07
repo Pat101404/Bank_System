@@ -9,7 +9,7 @@
         <div class="cardcontainer">
             <div class="card">
                 <div class="header">
-                    <h3 class="title">Card</h3>
+                    <h3 class="title">Card #1</h3>
                     <svg xmlns="http://www.w3.org/2000/svg" class="logo" width="140" height="43" viewBox="0 0 175.7 53.9">
                         <style>
                             .visa {
@@ -35,6 +35,36 @@
                         <label>CVV</label>
                         <p>335</p>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-limits">
+            <div class="card-limit">
+                <i class='bx bx-money-withdraw'></i>
+                <div>
+                    <h3>ATM Withdrawals</h3>
+                    <p>$1,000</p>
+                </div>
+            </div>
+            <div class="card-limit">
+                <i class='bx bx-credit-card'></i>
+                <div>
+                    <h3>Card payments</h3>
+                    <p>$200</p>
+                </div>
+            </div>
+            <div class="card-limit">
+                <i class='bx bx-world'></i>
+                <div>
+                    <h3>Internet payments</h3>
+                    <p>$2,000</p>
+                </div>
+            </div>
+            <div class="card-limit">
+                <i class='bx bx-merge'></i>
+                <div>
+                    <h3>Total with/pay</h3>
+                    <p>$5,000</p>
                 </div>
             </div>
         </div>
@@ -93,7 +123,7 @@
         <div class="cardcontainer">
             <div class="card">
                 <div class="header">
-                    <h3 class="title">Card</h3>
+                    <h3 class="title">Card #2</h3>
                 </div>
                 <div class="cardcontent">
                     <div class="row">
@@ -108,6 +138,36 @@
                         <label>CVV</label>
                         <p>335</p>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-limits">
+            <div class="card-limit">
+                <i class='bx bx-money-withdraw'></i>
+                <div>
+                    <h3>ATM Withdrawals</h3>
+                    <p>$1,000</p>
+                </div>
+            </div>
+            <div class="card-limit">
+                <i class='bx bx-credit-card'></i>
+                <div>
+                    <h3>Card payments</h3>
+                    <p>$200</p>
+                </div>
+            </div>
+            <div class="card-limit">
+                <i class='bx bx-world'></i>
+                <div>
+                    <h3>Internet payments</h3>
+                    <p>$2,000</p>
+                </div>
+            </div>
+            <div class="card-limit">
+                <i class='bx bx-merge'></i>
+                <div>
+                    <h3>Total with/pay</h3>
+                    <p>$5,000</p>
                 </div>
             </div>
         </div>
@@ -132,28 +192,20 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Card #1</td>
+                    <td>Card #2</td>
                     <td>John Doe</td>
                     <td>15:42 | 14/08/2023</td>
                     <td>transaction</td>
-                    <td>100,000</td>
-                    <td><span class="status completed">Completed</span></td>
+                    <td>-20,000</td>
+                    <td><span class="status pending">Pending</span></td>
                 </tr>
                 <tr>
-                    <td>Card #1</td>
+                    <td>Card #2</td>
                     <td>John Doe</td>
                     <td>15:42 | 14/08/2023</td>
                     <td>transaction</td>
-                    <td>50,000</td>
-                    <td><span class="status failed">Failled</span></td>
-                </tr>
-                <tr>
-                    <td>Card #1</td>
-                    <td>John Doe</td>
-                    <td>15:42 | 14/08/2023</td>
-                    <td>transaction</td>
-                    <td>1,000,000</td>
-                    <td><span class="status declined">Declined</span></td>
+                    <td>10,000</td>
+                    <td><span class="status process">Processing</span></td>
                 </tr>
             </tbody>
         </table>

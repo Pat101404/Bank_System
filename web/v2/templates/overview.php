@@ -68,7 +68,7 @@
                     <td><span class="status completed">Completed</span></td>
                 </tr>
                 <tr>
-                    <td>Card #3</td>
+                    <td>Card #2</td>
                     <td>John Doe</td>
                     <td>15:42 | 14/08/2023</td>
                     <td>transaction</td>

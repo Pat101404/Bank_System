@@ -1,6 +1,46 @@
+:root {
+    --light: #f6f6f9;
+    --primary: #8D169E;
+    --light-primary: #CFE8FF;
+    --grey: #eee;
+    --dark-grey: #AAAAAA;
+    --dark: #363949;
+    --danger: #D32F2F;
+	--light-danger: #FECDD3;
+    --warning: #FBC02D;
+    --light-warning: #FFF2C6;
+    --success: #388E3C;
+    --light-success: #BBF7D0;
+    --processing: #1976D2;
+}
+
 .content main .datarow .card-window{
     flex-grow: 1;
     flex-basis: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content main .datarow .card-window .card-limits{
+    margin-left: 24px;
+    align-self: center;
+}
+
+.content main .datarow .card-window .card-limits .card-limit{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    display: flex;
+}
+
+.content main .datarow .card-window .card-limits .card-limit i{
+    font-size: 2.5rem;
+    align-self: center;
+    padding-right: 24px;
+}
+
+.content main .datarow .card-window .card-limits .card-limit p{
+    padding-left: 6px;
+    color: var(--dark-grey);
 }
 
 .content main .datarow .card-transactions{
