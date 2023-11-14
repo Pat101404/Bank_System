@@ -198,6 +198,9 @@ body{
 .content nav a{
     color: var(--dark);
 }
+.content nav h3{
+    color: var(--dark);
+}
 
 .content nav .bx.bx-menu{
     cursor: pointer;
@@ -206,7 +209,7 @@ body{
 
 .content main{
     width: 100%;
-    padding: 36px 24px;
+    padding: 24px 24px;
     max-height: calc(100vh - 56px);
 }
 
@@ -232,7 +235,7 @@ body{
 }
 
 .content main .header .left .breadcrumb li{
-    color: var(--dark);
+    color: var(--light);
 }
 
 .content main .header .left .breadcrumb li a{

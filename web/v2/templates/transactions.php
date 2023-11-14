@@ -1,9 +1,3 @@
-<div class="header">
-    <div class="left">
-        <h1>Transactions</h1>
-    </div>
-</div>
-
 <!-- datarow -->
 <div class="datarow">
     <!-- transaction-list -->

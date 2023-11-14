@@ -23,6 +23,11 @@ function toggleElement(elementId) {
     elementIds.forEach(function(id) {
         var element = document.getElementById(id);
         if (id === elementId) {
+            const str = elementId;
+            const str2 = str.charAt(0).toUpperCase() + str.slice(1);
+            console.log(str2);
+            document.getElementById("title").innerHTML = "FlowBank | "+ str2;
+            document.getElementById("pagetitle").innerHTML = str2;
             element.style.display = "block"; // Show the specified element
         } else {
             element.style.display = "none"; // Hide other elements

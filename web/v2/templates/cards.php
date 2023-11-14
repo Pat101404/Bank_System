@@ -1,9 +1,3 @@
-<div class="header">
-    <div class="left">
-        <h1>Cards</h1>
-    </div>
-</div>
-
 <div class="datarow">
     <div class="card-window">
         <div class="cardcontainer">
@@ -43,28 +37,28 @@
                 <i class='bx bx-money-withdraw'></i>
                 <div>
                     <h3>ATM Withdrawals</h3>
-                    <p>$1,000</p>
+                    <p>$0 / $1,000</p>
                 </div>
             </div>
             <div class="card-limit">
                 <i class='bx bx-credit-card'></i>
                 <div>
                     <h3>Card payments</h3>
-                    <p>$200</p>
+                    <p>$0 / $200</p>
                 </div>
             </div>
             <div class="card-limit">
                 <i class='bx bx-world'></i>
                 <div>
                     <h3>Internet payments</h3>
-                    <p>$2,000</p>
+                    <p>$0 / $2,000</p>
                 </div>
             </div>
             <div class="card-limit">
                 <i class='bx bx-merge'></i>
                 <div>
                     <h3>Total with/pay</h3>
-                    <p>$5,000</p>
+                    <p>$0 / $5,000</p>
                 </div>
             </div>
         </div>
@@ -152,28 +146,28 @@
                 <i class='bx bx-money-withdraw'></i>
                 <div>
                     <h3>ATM Withdrawals</h3>
-                    <p>$1,000</p>
+                    <p>$0 / $1,000</p>
                 </div>
             </div>
             <div class="card-limit">
                 <i class='bx bx-credit-card'></i>
                 <div>
                     <h3>Card payments</h3>
-                    <p>$200</p>
+                    <p>$0 / $200</p>
                 </div>
             </div>
             <div class="card-limit">
                 <i class='bx bx-world'></i>
                 <div>
                     <h3>Internet payments</h3>
-                    <p>$2,000</p>
+                    <p>$0 / $2,000</p>
                 </div>
             </div>
             <div class="card-limit">
                 <i class='bx bx-merge'></i>
                 <div>
                     <h3>Total with/pay</h3>
-                    <p>$5,000</p>
+                    <p>$0 / $5,000</p>
                 </div>
             </div>
         </div>

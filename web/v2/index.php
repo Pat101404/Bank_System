@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/card_page.css">
     <link rel="stylesheet" href="./styles/card.css">
-    <title>FlowBank | Overview</title>
+    <title id=title>FlowBank | Overview</title>
     <link rel="icon" type="image/x-icon" href="./imgs/logo/logo.svg">
 </head>
 

@@ -1,8 +1,3 @@
-<div class="header">
-    <div class="left">
-        <h1>Overview</h1>
-    </div>
-</div>
 <!-- infoboxes -->
 <ul class="infoboxes">
     <li><i class='bx bx-user'></i>
