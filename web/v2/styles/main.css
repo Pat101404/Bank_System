@@ -347,6 +347,76 @@ body{
     font-weight: 600;
 }
 
+.content main .accountrow{
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 24px;
+    margin-top: 24px;
+    width: 100%;
+    color: var(--dark);
+}
+
+.content main .accountrow>div{
+    border-radius: 20px;
+    background: var(--light);
+    padding: 24px;
+    overflow-x: auto;
+}
+
+.content main .accountrow .header{
+    display: flex;
+    align-items: center;
+    grid-gap: 16px;
+    margin-bottom: 24px;
+}
+
+.content main .accountrow .header h3{
+    margin-right: auto;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.content main .accountrow .header .bx{
+    cursor: pointer;
+}
+
+.content main .accountrow .accountpanelleft{
+    flex-grow: 1;
+    flex-basis: 500px;
+}
+
+.content main .accountrow .accountpanelleft .panelcontents table tr th{
+    padding: 6px 24px 6px 24px;
+    text-align: left;
+}
+
+.content main .accountrow .accountpanelleft .panelcontents table tr th.data{
+    color: var(--dark-grey) !important;
+    font-weight: normal !important;
+}
+
+.content main .accountrow .accountpanelright{
+    flex-grow: 1;
+    flex-basis: 200px;
+}
+
+.content main .accountrow .accountpaneltitle{
+    display: flex;
+    align-items: center;
+    grid-gap: 16px;
+    margin-bottom: 24px;
+}
+
+.content main .accountrow .accountpanelright table tr th{
+    padding: 6px 24px 6px 24px;
+    text-align: left;
+}
+
+.content main .accountrow .accountpanelright table tr th.data{
+    color: var(--dark-grey) !important;
+    font-weight: normal !important;
+}
+
 .content main .datarow .header .bx{
     cursor: pointer;
 }
