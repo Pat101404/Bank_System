@@ -3,16 +3,16 @@
     <li><i class='bx bx-user'></i>
         <span class="info">
             <h3>
-                Acc #1
+                <?php echo $account["name"] ?>
             </h3>
-            <p>Jane Doe</p>
+            <p><?php echo $users[0]["fname"]." ".$users[0]["lname"] ?></p>
         </span>
     </li>
     <li>
         <i class='bx bx-dollar-circle'></i>
         <span class="info">
             <h3>
-                $6,750
+                <?php echo "$".$account["balance"] ?>
             </h3>
             <p>Balance</p>
         </span>
@@ -20,7 +20,7 @@
     <li><i class='bx bx-dollar-circle'></i>
         <span class="info">
             <h3>
-                $7,125
+                $
             </h3>
             <p>Total Balance</p>
         </span>
@@ -28,7 +28,7 @@
     <li><i class='bx bx-line-chart'></i>
         <span class="info">
             <h3>
-                - $375
+                $
             </h3>
             <p>Pending Balance</p>
         </span>

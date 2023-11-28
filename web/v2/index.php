@@ -14,6 +14,96 @@
 
 <body class="dark">
 
+    <?php
+        $servername = "localhost"; // Replace with your MySQL server name
+        $username = "root"; // Replace with your MySQL username
+        $password = "Pat19982004"; // Replace with your MySQL password
+        $dbname = "bank"; // Replace with your MySQL database name
+
+        // Create a connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        //get id from login post
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // collect value of input field
+            $accountname = $_POST['accountname'];
+            $passpass = $_POST['passpass'];
+        }
+
+        $sql = "SELECT ID_account FROM accounts WHERE accountname = '$accountname' AND passpass = '$passpass'";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                $accountid = $row["ID_account"];
+            }
+        } else {
+            header('Location: '."./login.php");
+            die("No such user found.");
+        }
+
+        //gather data from database into variables
+
+        //get ID_user instances from accounts_+_users table using ID_account into an array
+        $sql = "SELECT * FROM `accounts_+_users` WHERE ID_account = '$accountid'";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                $userids =[];
+                $userids[] = $row["ID_user"];
+            }
+        } else {
+            echo "No user assigned to account id";
+        }
+
+        //get account data from accounts table 
+        $account = [];
+        $sql = "SELECT * FROM accounts WHERE ID_account = '$accountid'";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                $account = array(
+                    "id" => $row["ID_account"],
+                    "name" => $row["accountname"], 
+                    "email" => $row["email"], 
+                    "phone" => $row["phone_number"], 
+                    "balance" => number_format($row["balance"]),
+                    "type" => $row["type"], 
+                    "creation_date" => $row["creation_date"]
+                );
+            }
+        } else {
+            echo "No data assigned to id";
+        }
+
+        //get user data from users table
+        $users = [];
+        foreach ($userids as $userid) {
+            $sql = "SELECT * FROM users WHERE ID_user = '$userid'";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                    $users[] = [
+                        "id" => $row["ID_user"],
+                        "fname" => $row["firstname"], 
+                        "lname" => $row["lastname"], 
+                        "bday" => $row["birthday"], 
+                        "email" => $row["email"], 
+                        "phone" => $row["phone_number"], 
+                        "address" => $row["address"]
+                    ];
+                }
+            } else {
+                echo "No data assigned to id";
+            }
+        }
+
+    ?>
+
     <!-- Sidebar -->
     <?php
         require "./templates/sidebar.php"
@@ -67,6 +157,12 @@
 
         </main>
     </div>
+
+    <?php
+        // Close the connection
+        $conn->close();
+    ?>
+
     <script src="./scrpits/main.js"></script>
 </body>
 
