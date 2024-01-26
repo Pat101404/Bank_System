@@ -37,15 +37,14 @@ DROP TABLE IF EXISTS `accounts` ;
 
 CREATE TABLE IF NOT EXISTS `accounts` (
   `ID_account` INT NOT NULL AUTO_INCREMENT,
-  `accountname` VARCHAR(45) NOT NULL,
+  `account_name` VARCHAR(45) NOT NULL,
   `passpass` VARCHAR(45) NOT NULL,
   `email` VARCHAR(80) NOT NULL,
   `phone_prefix` VARCHAR(4) NOT NULL,
   `phone_number` VARCHAR(45) NOT NULL,
   `balance` INT NOT NULL,
-  `type` VARCHAR(45) NOT NULL,
   `creation_date` DATE NOT NULL,
-  `account_type` VARCHAR(45) NOT NULL,
+  `account_type` INT NOT NULL,
   PRIMARY KEY (`ID_account`),
   UNIQUE INDEX `ID_accounts_UNIQUE` (`ID_account` ASC) VISIBLE,
   INDEX `fk_accounts_account_types1_idx` (`account_type` ASC) VISIBLE,
@@ -157,7 +156,7 @@ DROP TABLE IF EXISTS `cards` ;
 CREATE TABLE IF NOT EXISTS `cards` (
   `ID_card` INT NOT NULL AUTO_INCREMENT,
   `ID_account` INT NOT NULL,
-  `number` INT NOT NULL,
+  `card_number` VARCHAR(20) NOT NULL,
   `card_type` INT NOT NULL,
   `card_brand` INT NOT NULL,
   `expire_date` DATE NOT NULL,
@@ -186,15 +185,15 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `transation_types`
+-- Table `transaction_types`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `transation_types` ;
+DROP TABLE IF EXISTS `transaction_types` ;
 
-CREATE TABLE IF NOT EXISTS `transation_types` (
-  `ID_transation_type` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `transaction_types` (
+  `ID_transaction_type` INT NOT NULL,
   `transaction_type` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`ID_transation_type`),
-  UNIQUE INDEX `ID_transation_types_UNIQUE` (`ID_transation_type` ASC) VISIBLE)
+  PRIMARY KEY (`ID_transaction_type`),
+  UNIQUE INDEX `ID_transaction_types_UNIQUE` (`ID_transaction_type` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
@@ -222,14 +221,14 @@ CREATE TABLE IF NOT EXISTS `transaction_log` (
   `ID_recipient` INT NOT NULL,
   `time` DATETIME NOT NULL,
   `amount` INT NOT NULL,
-  `transation_type` INT NOT NULL,
+  `transaction_type` INT NOT NULL,
   `ID_card` INT NULL,
   `transaction_status_type` INT NOT NULL,
   PRIMARY KEY (`ID_transaction_log`, `ID_sender`, `ID_recipient`),
   UNIQUE INDEX `ID_transaction_log_UNIQUE` (`ID_transaction_log` ASC) VISIBLE,
   INDEX `fk_transaction_log_accounts1_idx` (`ID_sender` ASC) VISIBLE,
   INDEX `fk_transaction_log_accounts2_idx` (`ID_recipient` ASC) VISIBLE,
-  INDEX `fk_transaction_log_transation_types1_idx` (`transation_type` ASC) VISIBLE,
+  INDEX `fk_transaction_log_transaction_types1_idx` (`transaction_type` ASC) VISIBLE,
   INDEX `fk_transaction_log_cards1_idx` (`ID_card` ASC) VISIBLE,
   INDEX `fk_transaction_log_transaction_status_types1_idx` (`transaction_status_type` ASC) VISIBLE,
   CONSTRAINT `fk_transaction_log_accounts1`
@@ -242,9 +241,9 @@ CREATE TABLE IF NOT EXISTS `transaction_log` (
     REFERENCES `accounts` (`ID_account`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_transaction_log_transation_types1`
-    FOREIGN KEY (`transation_type`)
-    REFERENCES `transation_types` (`ID_transation_type`)
+  CONSTRAINT `fk_transaction_log_transaction_types1`
+    FOREIGN KEY (`transaction_type`)
+    REFERENCES `transaction_types` (`ID_transaction_type`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_transaction_log_cards1`
@@ -267,7 +266,7 @@ DROP TABLE IF EXISTS `card_limits` ;
 
 CREATE TABLE IF NOT EXISTS `card_limits` (
   `ID_card` INT NOT NULL,
-  `limt_atm` INT NOT NULL,
+  `limit_atm` INT NOT NULL,
   `limit_atm_used` INT NOT NULL,
   `limit_card` INT NOT NULL,
   `limit_card_used` INT NOT NULL,
@@ -288,81 +287,6 @@ SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
-
--- -----------------------------------------------------
--- procedure creation
--- -----------------------------------------------------
-
-DELIMITER $$
-
-CREATE PROCEDURE find_account_data(IN id INT)
-BEGIN
-  SELECT * FROM accounts WHERE ID_account = id;
-END $$
-CREATE PROCEDURE find_account_type(IN id INT)
-BEGIN
-  SELECT account_type FROM account_types WHERE ID_account_type = id;
-END $$
-
-CREATE PROCEDURE find_user_data(IN id INT)
-BEGIN
-  SELECT * FROM users WHERE ID_user = id;
-END $$
-
-CREATE PROCEDURE find_account_user_type(IN id INT)
-BEGIN
-  SELECT * FROM account_user_types WHERE ID_account_user_type = id;
-END $$
-
-CREATE PROCEDURE find_account_owner_ID(IN id INT)
-BEGIN
-  SELECT ID_user FROM `accounts_+_users` WHERE ID_account = id AND account_user_type = 1;
-END $$
-CREATE PROCEDURE find_account_user_ID(IN id INT)
-BEGIN
-  SELECT ID_user FROM `accounts_+_users` WHERE ID_account = id AND NOT account_user_type = 1;
-END $$
-
-CREATE PROCEDURE find_card_data(IN id INT)
-BEGIN
-  SELECT * FROM cards WHERE ID_card = id;
-END $$
-CREATE PROCEDURE find_card_brand(IN id INT)
-BEGIN
-  SELECT card_brand FROM card_brands WHERE ID_card_brand = id;
-END $$
-CREATE PROCEDURE find_card_type(IN id INT)
-BEGIN
-  SELECT card_type FROM card_types WHERE ID_card_type = id;
-END $$
-
-CREATE PROCEDURE find_transaction_log_by_sender(IN id INT)
-BEGIN
-  SELECT * FROM transaction_log WHERE ID_sender = id;
-END $$
-CREATE PROCEDURE find_transaction_log_by_recipient(IN id INT)
-BEGIN
-  SELECT * FROM transaction_log WHERE ID_recipient = id;
-END $$
-CREATE PROCEDURE find_transaction_log_by_datetime(IN t DATETIME)
-BEGIN
-  SELECT * FROM transaction_log WHERE `time` = t;
-END $$
-CREATE PROCEDURE find_transaction_type(IN id INT)
-BEGIN
-  SELECT transaction_type FROM transaction_types WHERE ID_transaction_type = id;
-END $$
-CREATE PROCEDURE find_transaction_status_type(IN id INT)
-BEGIN
-  SELECT transaction_status_type FROM transaction_status_types WHERE ID_transaction_status_type = id;
-END $$
-
-CREATE PROCEDURE find_ID_account_from_login(IN mail VARCHAR(80), IN pass VARCHAR(45))
-BEGIN
-  SELECT ID_account FROM accounts WHERE email = mail AND passpass = pass;
-END $$
-
-DELIMITER ;
 
 INSERT INTO account_types (ID_account_type, account_type) VALUES
 (1, "admin"),
@@ -422,7 +346,7 @@ INSERT INTO cards (ID_account, card_number, card_type, card_brand, expire_date, 
 (5, 8888888888888888, 2, 1, "2025-05-01", 888),
 (6, 9999999999999999, 1, 2, "2025-05-01", 999);
 
-INSERT INTO card_limits (ID_card, limit_atm, limit_atm_used, limit_card, limi_card_used, limit_web, limit_web_used, limit_total, limit_total_used) VALUES
+INSERT INTO card_limits (ID_card, limit_atm, limit_atm_used, limit_card, limit_card_used, limit_web, limit_web_used, limit_total, limit_total_used) VALUES
 (1, 0, 0, 0, 0, 0, 0, 0, 0),
 (2, 500, 0, 10000, 0, 10000, 0, 100000, 0),
 (3, 500, 0, 5000, 0, 5000, 0, 50000, 0),
@@ -432,3 +356,22 @@ INSERT INTO card_limits (ID_card, limit_atm, limit_atm_used, limit_card, limi_ca
 (7, 500, 0, 20000, 0, 20000, 0, 200000, 0),
 (8, 500, 0, 10000, 0, 10000, 0, 100000, 0),
 (9, 500, 0, 500, 0, 500, 0, 2000, 0);
+
+INSERT INTO transaction_types (ID_transaction_type, transaction_type) VALUES 
+(1, "payment"),
+(2, "card"),
+(3, "withdrawal");
+
+INSERT INTO transaction_status_types (ID_status_type, transaction_status_type) VALUES
+(1, "completed"),
+(2, "pending"),
+(3, "declined"),
+(4, "failed");
+
+INSERT INTO transaction_log (ID_sender, ID_recipient, `time`, amount, transaction_type, ID_card, transaction_status_type) VALUES
+(1, 4, "2024-01-01 12:00:00", 10000, 2, 1, 1),
+(1, 4, "2024-01-01 12:00:00", 50000, 2, 1, 2),
+(1, 4, "2024-01-01 12:00:00", 100000, 2, 1, 3),
+(4, 1, "2024-01-01 12:00:00", 10000, 2, 5, 2),
+(4, 1, "2024-01-01 12:00:00", 50000, 2, 5, 1),
+(4, 1, "2024-01-01 12:00:00", 100000, 2, 6, 4);

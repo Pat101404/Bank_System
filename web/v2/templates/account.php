@@ -8,15 +8,15 @@
             <table>
                 <tr>
                     <th>Account Name:</th>
-                    <th class="data"><p><?php echo $account["name"] ?></p></th>
+                    <th class="data"><p><?php echo $account["account_name"] ?></p></th>
                 </tr>
                 <tr>
                     <th>Account ID:</th>
-                    <th class="data"><p><?php echo $account["id"] ?></p></th>
+                    <th class="data"><p><?php echo $account["ID_account"] ?></p></th>
                 </tr>
                 <tr>
                     <th>Account type:</th>
-                    <th class="data"><p><?php echo $account["type"] ?></p></th>
+                    <th class="data"><p><?php echo $account["account_type"] ?></p></th>
                 </tr>
                 <tr>
                     <th>Email:</th>
@@ -24,7 +24,7 @@
                 </tr>
                 <tr>
                     <th>phone:</th>
-                    <th class="data"><p>+420 <?php echo $account["phone"] ?></p></th>
+                    <th class="data"><p><?php echo $account["phone_prefix"]." ".$account["phone_number"] ?></p></th>
                 </tr>
                 <tr>
                     <th>Date of creation:</th>
@@ -57,7 +57,7 @@
             </tr>
             <tr>
                 <th>Address:</th>
-                <th class="data"><p><?php echo $users[0]["address"] ?></p></th>
+                <th class="data"><p><?php echo $users[0]["state"].", ".$users[0]["city"].", ".$users[0]["street_address"].", ".$users[0]["zipcode"] ?></p></th>
             </tr>
             <tr>
                 <th>Date of birth:</th>

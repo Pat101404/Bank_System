@@ -3,7 +3,7 @@
 :root {
     --light: #f6f6f9;
     --primary: #8D169E;
-    --light-primary: #CFE8FF;
+    --light-primary: #d2a4d8;
     --grey: #eee;
     --dark-grey: #AAAAAA;
     --dark: #363949;
@@ -303,9 +303,19 @@ body{
     color: var(--warning);
 }
 
+.content main .infoboxes li:nth-child(4){
+    background-color: var(--light-primary);
+    border-radius: 64px;
+}
+
+.content main .infoboxes li:nth-child(4) span h3{
+    color: var(--primary);
+}
+
 .content main .infoboxes li:nth-child(4) .bx{
-    background: var(--light-danger);
-    color: var(--danger);
+    background: var(--primary);
+    color: var(--light-primary);
+    border-radius: 50%;
 }
 
 .content main .infoboxes li .info h3{
@@ -491,6 +501,24 @@ body{
 
 .content main .datarow .transaction-list table tr td .status.declined{
     background: var(--danger);
+}
+
+.content main .datarow .transaction-list table tr td span.confirm_transaction{
+    font-size: 10px;
+    padding: 6px 16px;
+    color: var(--light);
+    border-radius: 20px;
+    font-weight: 700;
+    background: var(--dark);
+}
+
+.content main .datarow .transaction-list table tr td span.deny_transaction{
+    font-size: 10px;
+    padding: 6px 16px;
+    color: var(--light);
+    border-radius: 20px;
+    font-weight: 700;
+    background: var(--dark);
 }
 
 .content main .datarow .notifications{

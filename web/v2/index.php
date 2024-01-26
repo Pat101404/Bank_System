@@ -31,11 +31,11 @@
         //get id from login post
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // collect value of input field
-            $accountname = $_POST['accountname'];
+            $logemail = $_POST['email'];
             $passpass = $_POST['passpass'];
         }
 
-        $sql = "SELECT ID_account FROM accounts WHERE accountname = '$accountname' AND passpass = '$passpass'";
+        $sql = "SELECT ID_account FROM accounts WHERE email = '$logemail' AND passpass = '$passpass'";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
@@ -66,15 +66,9 @@
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
-                $account = array(
-                    "id" => $row["ID_account"],
-                    "name" => $row["accountname"], 
-                    "email" => $row["email"], 
-                    "phone" => $row["phone_number"], 
-                    "balance" => number_format($row["balance"]),
-                    "type" => $row["type"], 
-                    "creation_date" => $row["creation_date"]
-                );
+                foreach ($row as $key => $value) {
+                    $account[$key] = $value;
+                }
             }
         } else {
             echo "No data assigned to id";
@@ -94,14 +88,16 @@
                         "bday" => $row["birthday"], 
                         "email" => $row["email"], 
                         "phone" => $row["phone_number"], 
-                        "address" => $row["address"]
+                        "city" => $row["city"],
+                        "street_address" => $row["street_address"],
+                        "state" => $row["state"],
+                        "zipcode" => $row["zipcode"]
                     ];
                 }
             } else {
                 echo "No data assigned to id";
             }
         }
-
     ?>
 
     <!-- Sidebar -->
@@ -137,11 +133,9 @@
                 ?>
             </div>
 
-            <div id="loans" style="display: none;">
-                <?php
-                    require "./templates/loans.php"
-                ?>
-            </div>
+            <!--<div id="loans" style="display: none;">
+                <?php //require "./templates/loans.php" ?>
+            </div>-->
 
             <div id="account" style="display: none;">
                 <?php
@@ -149,9 +143,21 @@
                 ?>
             </div>
 
-            <div id="settings" style="display: none;">
+            <div id="manage" style="display: none;">
                 <?php
-                    require "./templates/settings.php"
+                    require "./templates/manage.php"
+                ?>
+            </div>
+
+            <div id="account creator" style="display: none;">
+                <?php
+                    require "./templates/account creator.php"
+                ?>
+            </div>
+
+            <div id="payment" style="display: none;">
+                <?php
+                    require "./templates/payment.php"
                 ?>
             </div>
 
@@ -159,7 +165,6 @@
     </div>
 
     <?php
-        // Close the connection
         $conn->close();
     ?>
 

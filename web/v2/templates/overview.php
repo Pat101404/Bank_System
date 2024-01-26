@@ -3,7 +3,7 @@
     <li><i class='bx bx-user'></i>
         <span class="info">
             <h3>
-                <?php echo $account["name"] ?>
+                <?php echo $account["account_name"] ?>
             </h3>
             <p><?php echo $users[0]["fname"]." ".$users[0]["lname"] ?></p>
         </span>
@@ -12,7 +12,7 @@
         <i class='bx bx-dollar-circle'></i>
         <span class="info">
             <h3>
-                <?php echo "$".$account["balance"] ?>
+                <?php echo "$".$account["balance"] ?> <!-- change later to show avaliable balance -->
             </h3>
             <p>Balance</p>
         </span>
@@ -20,17 +20,17 @@
     <li><i class='bx bx-dollar-circle'></i>
         <span class="info">
             <h3>
-                $
+                <?php echo "$".$account["balance"] ?>
             </h3>
             <p>Total Balance</p>
         </span>
     </li>
-    <li><i class='bx bx-line-chart'></i>
+    <li onclick="toggleElement('payment')"><i class='bx bx-dollar'></i>
         <span class="info">
             <h3>
-                $
+                Make payment
             </h3>
-            <p>Pending Balance</p>
+            <p></p>
         </span>
     </li>
 </ul>
@@ -45,95 +45,69 @@
         <table>
             <thead>
                 <tr>
-                    <th>Card</th>
+                    <th>Sender</th>
                     <th>Recipient</th>
                     <th>Transaction Time</th>
-                    <th>Type</th>
                     <th>Amount</th>
+                    <th>Type</th>
+                    <th>Card</th>
                     <th>Status</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Card #1</td>
-                    <td>John Doe</td>
-                    <td>15:42 | 14/08/2023</td>
-                    <td>transaction</td>
-                    <td>100,000</td>
-                    <td><span class="status completed">Completed</span></td>
-                </tr>
-                <tr>
-                    <td>Card #2</td>
-                    <td>John Doe</td>
-                    <td>15:42 | 14/08/2023</td>
-                    <td>transaction</td>
-                    <td>-20,000</td>
-                    <td><span class="status pending">Pending</span></td>
-                </tr>
-                <tr>
-                    <td>Card #2</td>
-                    <td>John Doe</td>
-                    <td>15:42 | 14/08/2023</td>
-                    <td>transaction</td>
-                    <td>10,000</td>
-                    <td><span class="status process">Processing</span></td>
-                </tr>
-                <tr>
-                    <td>Card #1</td>
-                    <td>John Doe</td>
-                    <td>15:42 | 14/08/2023</td>
-                    <td>transaction</td>
-                    <td>50,000</td>
-                    <td><span class="status failed">Failled</span></td>
-                </tr>
-                <tr>
-                    <td>Card #1</td>
-                    <td>John Doe</td>
-                    <td>15:42 | 14/08/2023</td>
-                    <td>transaction</td>
-                    <td>1,000,000</td>
-                    <td><span class="status declined">Declined</span></td>
-                </tr>
+                <!-- make this show the last 5 transactions for account -->
+                <?php
+
+                    $transactions = [];
+                    $sql = "SELECT * FROM transaction_log WHERE ID_sender = '$accountid' OR ID_recipient = '$accountid' ORDER BY `time` DESC";
+                    $result = $conn->query($sql);
+                    if ($result->num_rows > 0) {
+                        $transactions = array();
+                        while ($row = $result->fetch_assoc()) {
+                            $transactions[] = $row;
+                        }
+                        for ($i = 0; $i <= 4; $i++){
+                            echo 
+                            "<tr> <td>ID# ".$transactions[$i]["ID_sender"].
+                            "</td> <td>ID# ".$transactions[$i]["ID_recipient"].
+                            "</td> <td>".$transactions[$i]["time"].
+                            "</td> <td>".$transactions[$i]["amount"].
+                            "</td> <td>".$transactions[$i]["transaction_type"].
+                            "</td> <td>".$transactions[$i]["ID_card"]."</td> <td>";
+                            switch($transactions[$i]["transaction_status_type"]){
+                                case "1":
+                                    echo "<span class='status completed'>Completed</span>";
+                                    break;
+                                case "2":
+                                    echo "<span class='status pending'>Pending</span>";
+                                    break;
+                                case "3":
+                                    echo "<span class='status failed'>Failled</span>";
+                                    break;
+                                case "4":
+                                    echo "<span class='status declined'>Declined</span>";
+                                    break;
+                            }
+                            echo "</td> </tr>";
+                        }
+                        //print_r($transactions);
+                    } else {
+                        
+                    }
+
+                    
+                ?>
             </tbody>
         </table>
     </div>
 
-    <!-- notifications -->
     <div class="notifications">
         <div class="header">
             <i class='bx bx-note'></i>
             <h3>Notifications</h3>
         </div>
         <ul class="notification-list">
-            <li class="notification">
-                <div class="notification-title">
-                    <i class='bx bx-error-circle'></i>
-                    <p>Notification1</p>
-                </div>
-                <i class='bx bx-dots-vertical-rounded'></i>
-            </li>
-            <li class="notification">
-                <div class="notification-title">
-                    <i class='bx bx-error-circle'></i>
-                    <p>Notification2</p>
-                </div>
-                <i class='bx bx-dots-vertical-rounded'></i>
-            </li>
-            <li class="notification">
-                <div class="notification-title">
-                    <i class='bx bx-error-circle'></i>
-                    <p>Notification3</p>
-                </div>
-                <i class='bx bx-dots-vertical-rounded'></i>
-            </li>
-            <li class="notification">
-                <div class="notification-title">
-                    <i class='bx bx-error-circle'></i>
-                    <p>Notification3</p>
-                </div>
-                <i class='bx bx-dots-vertical-rounded'></i>
-            </li>
+            <!-- placeholder -->
         </ul>
     </div>
-    <!-- End of notifications-->
 </div>
