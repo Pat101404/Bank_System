@@ -33,7 +33,8 @@ for ($j=0; $j < count($cardids); $j++) {
         <div class='card'> 
         <div class='header'>
     ";
-    echo "<h3 class='title'>Card#".($j+1)."</h3>";
+    $currentID = $cards[$j]['ID_card'];
+    echo "<h3 class='title'>Card#".($currentID)."</h3>";
     if ($cards[$j]["card_type"] == 1){
         echo "<svg xmlns='http://www.w3.org/2000/svg' class='logo' width='90' height='43' viewBox='0 0 143 88.78'>
         <title>Mastercard logo</title>
@@ -61,7 +62,7 @@ for ($j=0; $j < count($cardids); $j++) {
     echo "<div class='row card-cvv'><label>CVV</label><p>".$cards[$j]["cvv"]."</p></div>";
     echo "</div></div></div>";
 
-    $currentID = $cards[$j]['ID_card'];
+    
     $cardlimits = [];
     $sql = "SELECT * FROM card_limits WHERE ID_card = $currentID";
     $result = $conn->query($sql);

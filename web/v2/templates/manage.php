@@ -49,8 +49,8 @@
                                     echo "<span class='status declined'>Declined</span>";
                                     break;
                             }
-                            echo "</td>.
-                            <td><span onclick='changeTransactionStatus(`row".$i."id`, `row".$i."idsender`, `row".$i."idrecipient`, `row".$i."amount`, 1)' class='confirm_transaction'>Confirm</span></td>.
+                            echo "</td>
+                            <td><span onclick='changeTransactionStatus(`row".$i."id`, `row".$i."idsender`, `row".$i."idrecipient`, `row".$i."amount`, 1)' class='confirm_transaction'>Confirm</span></td>
                             <td><span onclick='changeTransactionStatus(`row".$i."id`, `row".$i."idsender`, `row".$i."idrecipient`, `row".$i."amount`, 4)' class='deny_transaction'>Deny</span></td>";
                             echo "</tr>";
                         }

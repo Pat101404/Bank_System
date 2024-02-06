@@ -562,6 +562,18 @@ body{
     margin-bottom: 0;
 }
 
+.content main .user_create_form form h3{
+    color: var(--dark) !important;
+}
+
+.content main .user_create_form form label{
+    color: var(--dark-grey) !important;
+}
+
+.content main .user_create_form form label.radio_select{
+    color: var(--dark) !important;
+}
+
 @media screen and (max-width: 768px) {
     .sidebar{
         width: 200px;
@@ -620,5 +632,6 @@ body{
     .content main .datarow .notifications .notification-list{
         min-width: 340px;
     }
+
 
 }

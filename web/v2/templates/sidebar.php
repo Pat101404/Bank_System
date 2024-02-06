@@ -10,7 +10,7 @@
         <!--<li><a onclick="toggleElement('loans')"><i class='bx bx-dollar'></i>Loans</a></li>-->
         <li><a onclick="toggleElement('account')"><i class='bx bx-user'></i>Account</a></li>
         <?php
-            if ($accountid == 1 or $accountid == 2 or $accountid == 3){
+            if ($account["account_type"] == 1 or $account["account_type"] == 2 or $account["account_type"] == 3) {
                 echo "<li><a onclick='toggleElement(`manage`)'><i class='bx bx-cog'></i>Manage</a></li>";
                 echo "<li><a onclick='toggleElement(`account creator`)'><i class='bx bx-cog'></i>Account creator</a></li>";
             }

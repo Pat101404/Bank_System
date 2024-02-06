@@ -30,9 +30,9 @@
         <form action="./index.php" method="post">
             <h3 class="login header">Login</h3>
             <label for="email">Email:</label><br>
-            <input type="text" id="email" name="email" value=""><br>
+            <input required="" type="text" id="email" name="email" value=""><br>
             <label for="password">Password:</label><br>
-            <input type="password" id="passpass" name="passpass" value=""><br><br>
+            <input required="" type="password" id="passpass" name="passpass" value=""><br><br>
             <input class="submit" type="submit" value="Submit">
         </form> 
     </div>
