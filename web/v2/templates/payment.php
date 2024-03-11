@@ -2,11 +2,11 @@
     <form action="../templates/payment processing.php" class="paymentform" method="post">
         <div class="column">
             <div class="input_box">
-                <label>ID of recipient:</label>
+                <label>ID of recipient:</label><br>
                 <input required="" name="ID_recipient" placeholder="Enter ID number" type="text">
             </div>
             <div class="input_box">
-                <label>Amount:</label>
+                <label>Amount:</label><br>
                 <input required="" name="amount" placeholder="Enter amount" type="text">
             </div>
         </div>

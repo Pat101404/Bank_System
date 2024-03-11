@@ -1,18 +1,18 @@
-<div class="user_create_form">
-    <form action="./templates/account creation.php" method="post">
+<div>
+    <form action="./templates/account creation.php" class="user_create_form" method="post">
         <div class="create_account">
             <h3>Account</h3>
-            <label>Account name:</label>
+            <label>Account name:</label><br>
             <input required="" name="account_name" placeholder="" type="text"><br>
-            <label>Email:</label>
+            <label>Email:</label><br>
             <input required="" name="email" placeholder="" type="text"><br>
-            <label>Password:</label>
+            <label>Password:</label><br>
             <input required="" name="password" placeholder="" type="text"><br>
-            <label>Phone prefix:</label>
+            <label>Phone prefix:</label><br>
             <input required="" name="account_phone_prefix" placeholder="+000" type="text"><br>
-            <label>Phone number:</label>
+            <label>Phone number:</label><br>
             <input required="" name="account_phone_number" placeholder="111222333" type="text"><br>
-            <label>Account type:</label>
+            <label>Account type:</label><br>
             <div class="account_types_select">
                 <?php
                     if ($account["account_type"] == 1){
@@ -51,19 +51,19 @@
         </div>
         <div class="create_user">
             <h3>Owner</h3>
-            <label>First name:</label>
+            <label>First name:</label><br>
             <input required="" name="firstname" placeholder="" type="text"><br>
-            <label>Last name:</label>
+            <label>Last name:</label><br>
             <input required="" name="lastname" placeholder="" type="text"><br>
-            <label>Birthday:</label>
+            <label>Birthday:</label><br>
             <input required="" name="birthday" placeholder="" type="date"><br>
-            <label>Email:</label>
+            <label>Email:</label><br>
             <input required="" name="useremail" placeholder="" type="text"><br>
-            <label>Phone prefix:</label>
+            <label>Phone prefix:</label><br>
             <input required="" name="user_phone_prefix" placeholder="+000" type="text"><br>
-            <label>Phone number:</label>
+            <label>Phone number:</label><br>
             <input required="" name="user_phone_number" placeholder="111222333" type="text"><br>
-            <label>Adress:</label>
+            <label>Adress:</label><br>
             <input required="" name="city" placeholder="city" type="text"><br>
             <input required="" name="street" placeholder="street adress" type="text"><br>
             <input required="" name="state" placeholder="state" type="text"><br>
