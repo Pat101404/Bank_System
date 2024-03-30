@@ -133,10 +133,6 @@
                 ?>
             </div>
 
-            <!--<div id="loans" style="display: none;">
-                <?php //require "./templates/loans.php" ?>
-            </div>-->
-
             <div id="account" style="display: none;">
                 <?php
                     require "./templates/account.php"

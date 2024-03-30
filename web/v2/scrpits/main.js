@@ -63,7 +63,6 @@ function changeTransactionStatus(rowid, rowidsender, rowidrecipient, rowamount, 
         }
         return response.text();
     }).then(data => {
-        // Handle the response if needed
         console.log(data);
     }).catch(error => {
         console.error('There was a problem with the fetch operation:', error);

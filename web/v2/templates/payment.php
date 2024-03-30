@@ -40,7 +40,7 @@
                     }
 
                     foreach ($cardids as $cardid){
-                        echo "<option value='".$cardid."'>ID_card# ".$cardid."</option>";//get account card ids
+                        echo "<option value='".$cardid."'>ID_card# ".$cardid."</option>";
                     }
                 ?>
             </select>

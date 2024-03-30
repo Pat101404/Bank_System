@@ -12,7 +12,7 @@
         <i class='bx bx-dollar-circle'></i>
         <span class="info">
             <h3>
-                <?php echo "$".$account["balance"] ?> <!-- change later to show avaliable balance -->
+                <?php echo "$".$account["balance"] ?> 
             </h3>
             <p>Balance</p>
         </span>

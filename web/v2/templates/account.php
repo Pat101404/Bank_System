@@ -61,7 +61,7 @@
             </tr>
             <tr>
                 <th>Date of birth:</th>
-                <th class="data"><p><?php echo $users[0]["bday"] // 05/06/1992 ?></p></th>
+                <th class="data"><p><?php echo $users[0]["bday"] ?></p></th>
             </tr>
         </table>
     </div>
